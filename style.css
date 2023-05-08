@@ -1,0 +1,726 @@
+:root {
+    --primario:#4994ba;
+    --secundario:#ff8600;
+    --terciario:#f8cc08c4;
+    --blanco:white;
+    --fuente:'Boogaloo', cursive;
+    --texto:#3f3f3f;
+    --detalle: #996699;
+    --enlace:#27187e;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+main {
+    margin-top: 80px;
+}
+
+h3 {
+    font-weight: 300;
+}
+
+a {
+    text-decoration: none;
+}
+
+.body {
+    color:var(--texto);
+    font-size: 1.2rem;
+    font-family: var(--fuente);
+    font-weight: 300;
+    background-image: linear-gradient(to top, #d5d4d0 0%, #d5d4d0 1%, #eeeeec 31%, #efeeec 75%, #e9e9e7 100%);
+    background-repeat:no-repeat;
+    background-size:cover
+    padding-bottom: 10px;
+    height: 100%;
+    min-width: 400px;
+    width: 100%;
+}
+
+/* Header, navegacion */
+
+.header {
+    position: fixed;
+    z-index: 100;
+    top:0;
+    left: 0;
+    width: 100%;
+    font-weight: 700;
+    /* background-color:white; */
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.24);
+    /* background-color:#5968b1; */
+    background-color:var(--primario);
+}
+
+.header__contenedor {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    margin: 0 5%;
+}
+
+.header__enlace {
+    display: flex;
+    align-items: center;
+}
+
+.header__titulo {
+    font-size: 3rem;
+    color: var(--blanco);
+    margin-top:5px;
+}
+
+.header__titulo--icon {
+    width: 30px;
+    margin-right: 5px;
+}
+
+.color__titulo--reducido {
+    color:var(--secundario);
+}
+
+.header__enlace:hover {
+    animation:pulse;
+    animation-duration: 1s;
+}
+
+.header__titulo--reducido {
+    font-size: 1.3rem;
+    color:var(--blanco);
+    margin: 0;
+}
+
+.navegacion-principal {
+    display:flex;
+    gap:40px;
+    margin-left: 40px;
+}
+
+.navegacion-principal__enlace {
+    text-decoration: none;
+    color:var(--blanco);
+    margin:auto 0;
+    border-radius:20px;
+    /* transition: all 0.50s ease; */
+    padding: 0.8rem;
+    text-decoration: none;
+}
+
+.navegacion-principal__enlace--activo {
+    color:#27187e;
+}
+
+.navegacion-principal__enlace--activo,
+.navegacion-principal__enlace:hover {
+    animation:pulse;
+    animation-duration: 1s;
+}
+
+.header__search {
+    border: none;
+    margin: 10px;
+    width: 300px;
+    border-radius: 20px;
+    font-family: var(--fuente) ;
+    font-size: 20px;
+    color:var(--texto);
+    outline:none;
+    padding: 5px;
+    text-align: center;
+}
+
+.header__search--boton {
+    border:none;
+    width: 60px;
+    margin:10px 0;
+    border: 20px;
+    outline: none;
+    font-family: var(--fuente);
+    font-size: 20px;
+    border-radius: 20px;
+    background-color: var(--secundario);
+    color:var(--blanco);
+    cursor: pointer;
+}
+
+.header__search:focus::placeholder {
+    color:transparent
+}
+
+
+.busqueda {
+    display: flex;
+}
+
+/* Pagina contacto */
+
+.flex-contacto {
+    display:flex;
+    flex-direction: row;
+    margin: 100px auto 0 auto;
+    justify-content: space-evenly;
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+
+.contenedor-datos {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-style: normal;
+    font-family: var(--fuente);
+}
+
+.datos-contacto {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 20px auto;
+    align-content: center;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.datos-contacto__texto {
+    margin:auto 0; 
+    padding: 1rem; 
+
+}
+
+.datos-contacto__direccion,
+.datos-contacto__telefono,
+.datos-contacto__mail {
+    display:flex;
+    justify-content:flex-start;
+}
+
+.datos-contacto__icon {
+    margin-right: 1rem;
+}
+
+.mapa-contacto__iframe {
+    border-radius: 20px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.24);
+}
+
+.contenedor-datos__titulo {
+    font-size: 2rem;
+}
+
+/* Formulario */
+
+.formulario {
+    margin: 0 20px;
+    width: 100%;
+    max-width: 400px;
+    min-width: 300px;
+    border-radius: 20px;
+    padding:20px 30px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.24);
+    text-align: center;
+    /* position: relative; */
+    background-color:var(--primario);
+    background-image: url(paws-transparente.png);
+    background-size: contain;
+    background-position: center;
+    color:var(--blanco);
+}
+
+
+.formulario__fieldset {
+    margin-top: 20px;
+    display:grid;
+    gap:10px;
+    border: none;
+}
+
+.formulario__item {
+    position: relative;
+}
+
+.formulario__input {
+    border: none;
+    width: 100%;
+    padding: 10px;
+    border-radius: 20px;
+    font-family: var(--fuente) ;
+    font-size: 1rem;
+    outline:none;
+    color:var(--texto);
+}
+
+.formulario__input:focus {
+    outline: 2px solid var(--secundario);
+}
+
+.formulario__legend {
+    display:inline;
+    margin-bottom:20px;
+}
+
+.formulario__boton {
+    color:var(--blanco);
+    background: var(--secundario);
+    font-family: var(--fuente);
+    font-size: 1.2rem;
+    padding: 0.5rem 0 ;
+    border: none;
+    border-radius: 20px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.footer {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    border: 2px solid black;
+    background-color: rgb(236, 234, 234);
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    border: none; */
+    box-shadow: 0 0 2rem var(--secundario);
+    opacity: 0.8;
+}
+
+
+/* Estilos Pagina Inicio */
+
+.hero {
+    height: 400px;
+    width: 95%;
+    /* background-color: #ff8800d0 ; */
+    background-color:var(--primario);
+    display: flex;
+    padding: 0 20px;
+    margin: 0 auto;
+    border-radius: 20px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.24);
+}
+
+.hero__text {
+    width: 50%;
+    /* background-color: #fbd634b9; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    margin:auto 0;
+}
+
+.hero__img {
+    display: block;
+    width: 50%;
+    background-image: url(imagenes/karsten-winegeart-oU6KZTXhuvk-unsplash.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 50%;
+    margin:5px 0;
+
+}
+
+.hero__titulo {
+    color: var(--blanco);
+    font-size: 5rem;
+    text-align: center;
+}
+
+.hero__slogan {
+    color:var(--blanco);
+    text-align: center;
+    margin: 0 20px;
+}
+
+.hero__icono {
+    width: 30px;
+    height: 30px;
+    margin: 10px 10px;
+}
+
+.hero__inferior {
+    display: flex;
+    margin-top: 50px;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero__redes {
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.seleccion__titulo {
+    font-size: 1.3rem;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.seleccion__contenedor {
+    width: 95%;
+    height: 250px;
+    margin: 5px auto;
+    display: flex;
+    justify-content: center;
+    gap:50px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+.seleccion__enlace {
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color:#000;
+    width: fit-content;
+    padding: 10px;
+    border-radius: 20px;;
+}
+
+.seleccion__img--perro {
+    width: 200px;
+    height: 200px;
+    background-color:white;
+    border-radius: 50%;
+    background-image: url(imagenes/karsten-winegeart-NE0XGVKTmcA-unsplash.jpg);
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.seleccion__img--gato {
+    width: 200px;
+    height: 200px;
+    background-color:white;
+    border-radius: 50%;
+    background-image: url(imagenes/bogdan-farca-CEx86maLUSc-unsplash.jpg);
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-position-y: -40px;
+
+}
+
+.seleccion__img--gato ,
+.seleccion__img--perro {
+    border: 5px solid var(--blanco);
+    
+}
+
+.seleccion__img--gato:hover ,
+.seleccion__img--perro:hover {
+animation:pulse;
+animation-duration: 1s;
+}
+
+
+h3.seleccion__nombre {
+    font-size: 1.3rem;
+    color:var(--texto);
+    font-weight: 400;
+}
+
+.sucursal__contenedor {
+    height: 200px;
+    width: 95%;
+    background-color:var(--primario);
+    display: flex;
+    padding: 0 20px;
+    margin: 0 auto;
+    border-radius: 20px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.24);
+}
+
+
+/* Seccion sucursal */
+
+.sucursal__contenedor {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+    gap:50px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.24);
+}
+
+.sucursal__img {
+    background-image: url(imagenes/frente-petshop.jpg) ;
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px;
+    width: 500px;
+    height: 80%;
+    margin: auto 0;
+}
+
+.sucursal__info {
+    text-align: center;
+    color: var(--blanco);
+}
+
+.sucursal__boton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 50px;
+    background-color: var(--secundario);
+    text-align: center;
+    color: var(--blanco);
+    font-size: 1.2rem;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.iframeIndex__contenedor {
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+
+/* Seccion nosotros */
+
+.nosotros {
+    height: 700px;
+    width: 95%;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    color:var(--blanco);
+    border-radius: 20px;
+    padding: 10px;
+    margin-bottom: 100px;
+
+
+}
+
+.nosotros__titulo {
+    font-size: 3rem;
+
+}
+
+.nosotros__texto {
+    text-align: center;
+    width: 60%;
+    padding: 50px 40px;
+    background-color: var(--primario);
+    background-image: url(paws-transparente.png);
+    border-radius: 20px 0 0 20px ;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.24);
+
+}
+
+.nosotros__img {
+    width: 40%;
+    height: 100%;
+    background-image: url(imagenes/alvan-nee-ZCHj_2lJP00-unsplash.jpg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 0 20px 20px 0;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.24);
+}
+
+/* Pagina Adopciones */
+
+.heroAdopciones {
+    width: 95%;
+    margin: 0 auto;
+    margin-top: 100px;
+    height: 450px;
+    background-image: url(imagenes/hero-adopciones.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 50px;
+
+}
+
+.sub__adopciones {
+    margin: 50px auto 0 auto;
+    width: 60%;
+    color:var(--blanco);
+    background-color: var(--detalle);
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.adopcionesGrid {
+    margin: 50px auto 50px auto;
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap:50px;
+}
+
+.cardAdopciones {
+    width: 300px;
+    height: 400px;
+    position:relative;
+}
+
+.cardAdopciones div {
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backface-visibility: hidden;
+    transition: 1s;
+}
+
+.cardAdopciones .front {
+    transform: perspective(500px) rotateY(0deg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.24);
+    border-radius: 20px;
+    border: 2px solid var(--blanco);
+}
+
+.cardAdopciones .back {
+    background-color: var(--primario);
+    background-image: url(paws-transparente.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform: perspective(500px) rotateY(180deg);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.24);
+    border-radius: 20px;
+    display: flex;
+    color:var(--blanco);
+    flex-direction: column;
+    justify-content: center;
+    gap:50px;
+    margin: 0 auto;
+    padding: 0 10px;
+    border: 2px solid var(--blanco)
+}
+
+.cardAdopciones:hover .front {
+    transform: perspective(500px) rotateY(180deg);
+}
+
+.cardAdopciones:hover .back {
+    transform: perspective(500px) rotateY(360deg);
+}
+
+.cardAdopciones__titulo {
+    align-self: flex-end;
+    color:white;
+}
+
+.front--mimada {
+    background-image: url(adopciones/Mimada.jpg) ;
+}
+.front--atleta {
+    background-image: url(adopciones/Atleta.jpg);
+}
+.front--cejitas {
+    background-image: url(adopciones/Cejitas.jpg);
+}
+.front--siete {
+    background-image: url(adopciones/7\ hermanos.jpg);
+}
+.front--horus {
+    background-image: url(adopciones/Horus.jpeg);
+}
+.front--calle {
+    background-image: url(adopciones/Calle.jpeg);
+}
+.front--tres-mosqueteros {
+    background-image: url(adopciones/3\ mosqueteros.jpg);
+}
+
+.front--oreo {
+    background-image: url(adopciones/Oreo.jpeg);
+}
+
+.front--miel {
+    background-image: url(adopciones/Miel.jpg);
+}
+
+.front--fito {
+    background-image: url(adopciones/Fito.jpg);
+}
+.front--olivia {
+    background-image: url(adopciones/Olivia.jpg);
+}
+
+
+
+
+@media (max-width:480px) {
+    body {
+        min-width: 310px;
+    }
+
+    main {
+        margin-top: 230px;
+    }
+
+    .busqueda,
+    .navegacion-principal,
+    .header__contenedor {
+        flex-direction: column;
+        gap:0px;
+        text-align: center;
+        align-items: center;
+        margin:0 auto;
+        min-width:310px;
+        width: 100vw;
+    }
+
+    .navegacion-principal {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+    }
+
+    .hero {
+        min-width: 310px;
+        width: 100vw;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: center;
+        margin: 0;
+        height: 500px;
+    }
+
+    .hero__slogan {
+        display: none;
+    }
+    
+    .hero__text,
+    .hero__img {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .hero__img {
+        width: 400px;
+        height: 400px;
+    }
+    .hero__redes {
+        display: none;
+    }
+}
